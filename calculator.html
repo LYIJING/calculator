@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+	#result {
+    width: 300px;
+    height: 50px;
+    text-align: right;
+	}
+
+	button{
+	width: 57px;
+	height: 40px;
+	font-size: 18px;
+	font-family: "微软雅黑" "宋体" serif;
+	}
+
+	.equal{
+	width: 57px;
+	height: 84px;
+	}
+
+	.zore{
+	width: 118px;
+	height: 40px;
+	}
+	</style>
+</head>
+<body>
+	<table>
+           <tr>
+               <td colspan="5"><button id="result">0</button></td>
+           </tr>
+           <tr>
+               <td><button value="<--" onclick="back()"><--</button></td>
+               <td><button value="CE" onclick="clearone()">CE</button></td>
+               <td><button value="C" onclick="clear()">C</button></td>
+               <td><button value="±" onclick="sign()">±</button></td>
+               <td><button value="√" onclick="sqrt()">√</button></td>
+           </tr>
+           <tr>
+           		<td><button value="7" onclick="num(this)">7</button></td>
+                <td><button value="8" onclick="num(this)">8</button></td>
+                <td><button value="9" onclick="num(this)">9</button></td>
+                <td><button value="/" onclick="countg(this)">/</button></td>
+                <td><button value="%" onclick="countg(this)">%</button></td>
+           </tr>
+           <tr>
+                <td><button value="4" onclick="num(this)">4</button></td>
+                <td><button value="5" onclick="num(this)">5</button></td>
+                <td><button value="6" onclick="num(this)">6</button></td>
+                <td><button value="*" onclick="countg(this)">*</button></td>
+                <td><button value="1/x" onclick="reciprocal()">1/x</button></td>
+           </tr>
+           <tr>
+                <td><button value="1" onclick="num(this)">1</button></td>
+                <td><button value="2" onclick="num(this)">2</button></td>
+                <td><button value="3" onclick="num(this)">3</button></td>
+                <td><button value="-" onclick="countg(this)">-</button></td>
+                <td rowspan="2"><button class="equal"value="=" onclick="equal()">=</button></td>
+           </tr>
+           <tr>
+                <td colspan="2"><button class="zore" value="0" onclick="num(this)">0</button></td>
+                <td><button value="." onclick="countg(this)">.</button></td>
+                <td><button value="+" onclick="countg(this)">+</button></td>
+           </tr>
+     </table>
+     <script type="text/javascript" src="./js/calculator.js"></script>
+</body>
+</html>
